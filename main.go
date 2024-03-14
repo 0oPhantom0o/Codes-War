@@ -19,7 +19,9 @@ You can assume, for the purpose of this kata, that the supplied array will not b
 
 func main() {
 	//smallestNumber()
-	NumberToStirnge()
+	//NumberToStirnge()
+	//BoolToWord()
+	//CheckForFactor()
 }
 
 func smallestNumber() {
@@ -52,4 +54,46 @@ func NumberToStirnge() {
 	n := 10
 	str := strconv.Itoa(n)
 	fmt.Println(str)
+}
+
+/*Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.*/
+func BoolToWord() {
+	n := true
+	str := strconv.FormatBool(n)
+	var a string
+	if str == "true" {
+		a = "Yes"
+	} else {
+		a = "No"
+	}
+	fmt.Println(a)
+}
+
+/*
+This function should test if the factor is a factor of base.
+
+Return true if it is a factor or false if it is not.
+About factors
+
+Factors are numbers you can multiply together to get another number.
+
+2 and 3 are factors of 6 because: 2 * 3 = 6
+
+	You can find a factor by dividing numbers. If the remainder is 0 then the number is a factor.
+	You can use the mod operator (%) in most languages to check for a remainder
+
+For example 2 is not a factor of 7 because: 7 % 2 = 1
+
+Note: base is a non-negative number, factor is a positive number.
+*/
+func CheckForFactor() {
+	factor := 3
+	base := 9
+	var a bool
+	if base%factor == 0 {
+		a = true
+	} else {
+		a = false
+	}
+	fmt.Println(a)
 }
