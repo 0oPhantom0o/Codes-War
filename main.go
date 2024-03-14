@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 /*
 	Given an array of integers your solution should find the smallest integer.
@@ -15,7 +18,8 @@ You can assume, for the purpose of this kata, that the supplied array will not b
 //*
 
 func main() {
-	smallestNumber()
+	//smallestNumber()
+	NumberToStirnge()
 }
 
 func smallestNumber() {
@@ -32,4 +36,20 @@ func smallestNumber() {
 	}
 	fmt.Println(emar[0])
 	//return emar[0]
+}
+
+/*
+We need a function that can transform a number (integer) into a string.
+
+What ways of achieving this do you know?
+Examples (input --> output):
+
+123  --> "123"
+999  --> "999"
+-100 --> "-100"
+*/
+func NumberToStirnge() {
+	n := 10
+	str := strconv.Itoa(n)
+	fmt.Println(str)
 }
